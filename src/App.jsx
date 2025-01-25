@@ -14,18 +14,20 @@ function App() {
   return (
     <Router>
       <div className="app-layout">
-        <Sidebar />
-        <div className="main-content">
+        <nav className='sidebar'>
+          <Sidebar />
+        </nav>
+        <main className="main-content">
           <Routes>
             <Route path='/' element = {<Dashboard/>} />
             <Route path='/transactions' element = {<Transactions/>} />
             <Route path='/budgeting' element = {<Budgeting/>} />
             <Route path='/AandL' element = {<AandL/>} />
             <Route path='/savings' element = {<Savings/>} />
-            <Route path='/Report' element = {<Report/>} />
-            <Route path='/Payments' element = {<Payments/>} />
+            <Route path='/report' element = {<Report/>} />
+            <Route path='/payments' element = {<Payments/>} />
           </Routes>
-        </div>
+        </main>
       </div>
     </Router>
   )
